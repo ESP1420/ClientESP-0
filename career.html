@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Career</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images\attachment-modified.png" type="image/png">
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+ <a class="navbar-brand" href="index.html">
+            <img src="images\attachment-modified.png" alt="Neural Thread Logo" class="logo-img">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="do.html"> What we do </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="portfolio.html"> Portfolio </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="career.html">Career</a>
+                </li>
+              </ul>
+              <div class="user_option">
+                <a href="">
+                  <img src="images/user.png" alt="">
+                </a>
+                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <br><br><br><br>
+  <section class="who_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="img-box">
+            <img src="images/job.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                Want to work with us?
+              </h2>
+            </div>
+            <p>
+              At Neural Thread, we engage with advanced technologies like Machine Learning and Artificial Intelligence, playing pivotal roles in our projects. If you possess the knowledge and skills, this presents an excellent opportunity for you to contribute to the dynamic field of Data Science and Artificial Intelligence.
+            </p>
+            <div>
+              <a href=Portfolio.html>
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>Internship at NeuralThread</h2>
+        </div>
+        <div class="">
+            <div class="">
+                <div class="row">
+                    <div class="col-md-9 mx-auto">
+                        <div class="contact-form">
+                            <form id="contactForm">
+                                <div>
+                                    <input type="text" placeholder="Full Name" id="fullName">
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="Phone Number" id="phoneNumber">
+                                </div>
+                                <div>
+                                    <input type="email" placeholder="Email Address" id="emailAddress">
+                                </div>
+                                <div>
+                                    <input placeholder="Why we should hire you?" class="input_message" id="message">
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn_on-hover">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map_img-box">
+            <img src="images/map-img.png" alt="">
+        </div>
+    </div>
+    
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyC2tps70VSieYJdScwkObkTrc_kNk8Q56o",
+        authDomain: "neuralthread-20.firebaseapp.com",
+        databaseURL: "https://neuralthread-20-default-rtdb.firebaseio.com",
+        projectId: "neuralthread-20",
+        storageBucket: "neuralthread-20.appspot.com",
+        messagingSenderId: "734937616393",
+        appId: "1:734937616393:web:f8c9dfc3c250f33c9ce8d8",
+        measurementId: "G-BWJK0FE7ZL"
+      };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contactForm');
+
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const fullName = document.getElementById('fullName').value;
+                const phoneNumber = document.getElementById('phoneNumber').value;
+                const emailAddress = document.getElementById('emailAddress').value;
+                const message = document.getElementById('message').value;
+
+                const contactRef = ref(database, 'contactResponses');
+
+                push(contactRef, {
+                    fullName: fullName,
+                    phoneNumber: phoneNumber,
+                    emailAddress: emailAddress,
+                    message: message
+                })
+                .then(() => {
+                    contactForm.reset();
+                    alert('Form submitted successfully!');
+                })
+                .catch((error) => {
+                    console.error('Error submitting form:', error);
+                    alert('Error submitting form. Please try again.');
+                });
+            });
+        });
+        
+    </script>
+</section>
+
+
+  <!-- end contact section -->
+
+    <!-- Info section -->
+    <section class="info_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mx-auto"> <!-- Add mx-auto class to center the column -->
+                    <div class="info_contact">
+                        <h5>Contact</h5>
+                        <div>
+                            <div class="img-box">
+                                <img src="images/location-white.png" width="18px" alt="">
+                            </div>
+                            <p>Mumbai, India</p>
+                        </div>
+                        
+                        <div>
+                            <div class="img-box">
+                                <img src="images/envelope-white.png" width="18px" alt="">
+                            </div>
+                            <p>neuralthread@post.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mx-auto"> <!-- Add mx-auto class to center the column -->
+                    <div class="info_info">
+                        <h5>Informations</h5>
+                        <p>Discover a fusion of style and tech in our Merchandise Collection at Neural Thread. Elevate your brand with thoughtfully curated products, embodying innovation and creativity.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mx-auto"> <!-- Add mx-auto class to center the column -->
+                    <div class="info_form">
+                        <h5>Newsletter</h5>
+                        <form id="newsletterForm">
+                            <input type="email" placeholder="Enter your email" id="newsletterEmail">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                        <div class="social_box">
+                            <a href="https://www.tiktok.com/@neuralthread?_t=8idoCd4U4hq&_r=1">
+                                <img src="images/twitter.png" alt="">
+                            </a>
+                            <a href="https://neuralthreads-2.creator-spring.com/">
+                                <img src="images/linkedin.png" alt="">
+                            </a>
+                            <a href="https://www.instagram.com/neuralthread/">
+                                <img src="images/youtube.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Firebase newsletter subscription script -->
+    <!-- Firebase newsletter subscription script -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+  // Firebase configuration
+  const firebaseConfig = {
+      apiKey: "AIzaSyC2tps70VSieYJdScwkObkTrc_kNk8Q56o",
+      authDomain: "neuralthread-20.firebaseapp.com",
+      databaseURL: "https://neuralthread-20-default-rtdb.firebaseio.com",
+      projectId: "neuralthread-20",
+      storageBucket: "neuralthread-20.appspot.com",
+      messagingSenderId: "734937616393",
+      appId: "1:734937616393:web:f8c9dfc3c250f33c9ce8d8",
+      measurementId: "G-BWJK0FE7ZL"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+
+  document.addEventListener('DOMContentLoaded', function () {
+      const newsletterForm = document.getElementById('newsletterForm');
+      const emailInput = document.getElementById('newsletterEmail');
+
+      newsletterForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          const email = emailInput.value;
+
+          if (validateEmail(email)) {
+              const newsletterRef = ref(database, 'newsletterSubscriptions');
+
+              push(newsletterRef, {
+                  email: email
+              })
+                  .then(() => {
+                      emailInput.value = '';
+                      alert('Subscribed successfully!');
+                  })
+                  .catch((error) => {
+                      console.error('Error subscribing:', error);
+                      alert('Error subscribing. Please try again.');
+                  });
+          } else {
+              alert('Invalid email address. Please enter a valid email.');
+          }
+      });
+
+      // Function to validate email format
+      function validateEmail(email) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+      }
+  });
+</script>
+
+    <!-- end info_section -->
+  
+    <!-- footer section -->
+    <section class="container-fluid footer_section text-center"> <!-- Add text-center class to center the text -->
+      <p>
+        &copy; 2024 All Rights Reserved By
+        <a href="#">Neural Thread</a>
+      </p>
+    </section>
+    <!-- footer section -->
+  
+    <!-- Your existing script tags -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
+    <!-- owl carousel script -->
+    <script type="text/javascript">
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 0,
+        navText: [],
+        center: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          1000: {
+            items: 3
+          }
+        }
+      });
+    </script>
+    <!-- end owl carousel script -->
+  
+  </body>
+  
+  </html>
+  
