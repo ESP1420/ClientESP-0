@@ -28,6 +28,7 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style1.css">
+	
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -508,7 +509,37 @@
 		</div>
 	</div>
 	
-
+	<div id="chat-circle" class="btn btn-raised">
+		<div id="chat-overlay"></div>
+		<i class="material-icons">android</i> <!-- This line specifies the Android logo -->
+	  </div>
+	  <div class="chat-box">
+		<div class="chat-box-header">
+		  Samir.ai
+		  <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+		</div>
+		<div class="chat-box-body">
+		  <div class="chat-box-overlay"></div>
+		  <div class="chat-logs"></div>
+		</div>
+		<div class="chat-input">      
+		  <form>
+			<select id="question-dropdown" class="form-control">
+			  <option value="" disabled selected>Select a question</option>
+			  <option value="0">What is your educational background?</option>
+			  <option value="1">Could you tell me about your work experience as a Data Analyst?</option>
+			  <option value="2">What projects have you worked on?</option>
+			  <option value="3">How did you contribute to your previous company as an Associate Software Developer?</option>
+			  <option value="4">What certifications do you hold?</option>
+			  <option value="5">What technical skills do you possess?</option>
+			  <option value="6">Can you describe your soft skills?</option>
+			  <option value="7">How did you optimize backend infrastructure at Profit Maxima?</option>
+			  <option value="8">What was your role as a Data Scientist at Neural Thread?</option>
+			  <option value="9">Could you explain your role in the creation of the Movie Recommendation System?</option>
+			</select>
+		  </form>      
+		</div>
+	  </div>
 
 	
 	<!-- jQuery -->
@@ -525,11 +556,13 @@
 	<script src="js/jquery.easypiechart.min.js"></script>
 	<!-- Google Map -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 	<script src="js/google_map.js"></script>
 	
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
+	<script src="js/ai.js"></script>
 	</body>
 </html>
 
