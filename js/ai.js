@@ -10,8 +10,8 @@ $(function() {
   $("#chat-form").submit(function(event) {
     event.preventDefault(); // Prevent default form submission
 
-    const userInput = document.getElementById('user-message').value;
-    document.getElementById('user-message').value = ''; // Clear input field
+    const userInput = document.getElementById('chat-input').value;
+    document.getElementById('chat-input').value = ''; // Clear input field
 
     generate_message(userInput, 'self');
     fetchResponse(userInput); // Send user input to API
