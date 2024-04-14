@@ -106,9 +106,12 @@ html, body {
   position: absolute;
   z-index: -1;   
 }
+
+
 #chat-input {
   background: #f4f7f9;
   width:100%; 
+    width: calc(100% - 60px); /* Adjusted width */
   position:relative;
   height:47px;  
   padding-top:10px;
