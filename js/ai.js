@@ -27,7 +27,7 @@ $(function() {
     """
     SAMIR SENGUPTA 
     Data Scientist 
-    Mumbai, India | 8356075699 | samir843301003@gmail.com | github.com/SamirSengupta | linkedin.com/in/samirsengupta | neuralthread.cloud/samir
+    Mumbai, India | 8356075699 | samir843301003@gmail.com | github.com/SamirSengupta | linkedin.com/in/samirsengupta | my website: neuralthread.cloud/samir
     SUMMARY 
     Experienced Data Scientist proficient in Large Language Models (LLM), Machine Learning (ML), Artificial Intelligence (AI), and 
     Deep Learning techniques. Skilled in Python libraries such as NumPy, Pandas, Scikit-learn, TensorFlow, and Keras, with expertise in 
