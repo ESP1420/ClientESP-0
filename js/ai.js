@@ -103,7 +103,7 @@ $(function() {
     leadership, and analytical thinking. 
     • Certifications: Google Certified Data Analyst, Blockchain Technology, Power BI, MySQL, Machine Learning, Recommender 
     System, Adobe Photoshop, Advanced Excel, Python. 
-
+"""
     
     `;
 
