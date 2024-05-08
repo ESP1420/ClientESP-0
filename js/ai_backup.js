@@ -1,3 +1,5 @@
+const API_KEY = 'AIzaSyArLPSqQsvFK3_sXbLHMxx6U3hfomsZ8J4'; // Replace 'YOUR_API_KEY' with your actual API key
+
 $(function() {
   var INDEX = 0;
 
@@ -15,15 +17,13 @@ $(function() {
     fetchResponse(userInput); // Send user input to API
   });
 
-  // Function to send a request to the Groq API
+  // Function to send a cURL-like request to the Generative AI API
   function fetchResponse(userInput) {
-    const GROQ_API_KEY = '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';
-    const model = "llama3-8b-8192";
-
     // Define internal prompt
     const internalPrompt = `
     You are going to get my resume which is in triple quotation marks. You need to give responses based on the given text within these triple quotes. If the user sends any general messages like greetings ("hi", "hello"), or asks about your background or interests, provide normal responses. Only respond to the questions asked by the user, which are indicated within angle brackets <>. give responses in 1 or 2 sentences. 
-    you are developed by Samir Sengupta and your name is Samir.ai. 
+    you are developed by Samir Sengupta as Samir.ai which is trained on 7 Billion Parameters.
+
     """
     SAMIR SENGUPTA 
     Data Scientist 
@@ -36,7 +36,7 @@ $(function() {
     the data science industry. Dedicated to leveraging AI, LLM, Lang Chain and data visualization skills to drive Innovation and 
     continuous improvement in solving real-world problems. 
     EDUCATION 
-    BACHELORS IN DATA SCIENCE. April 2023, CGPA: 9.77, 
+    BACHELORS IN DATA SCIENCE. April 2023 
     University of Mumbai. Mumbai, India 
     Acquired Skills: Deep Learning, Machine Learning, Artificial Intelligence, Databases, Neural Networks, Large Language Model. 
     Higher Secondary Education (Science). April 2020 
@@ -102,24 +102,29 @@ $(function() {
     excellent time management, adaptable to change, committed to continuous learning, skilled in critical thinking, capable 
     leadership, and analytical thinking. 
     • Certifications: Google Certified Data Analyst, Blockchain Technology, Power BI, MySQL, Machine Learning, Recommender 
-    System, Adobe Photoshop, Advanced Excel, Python. remember to always give responses in 1 or 2 small sentences maximum limit of 100 characters.
-    When you give response anything about Samir resume make sure to mention him as 'my'.
+    System, Adobe Photoshop, Advanced Excel, Python. 
 """
+    
     `;
 
     // Combine user input with internal prompt
-    const promptWithUserInput = internalPrompt + '\n' + '<' + userInput + '>'  ;
+    const promptWithUserInput = internalPrompt + '\n' + '<' + userInput + '>' ;
 
-    fetch('https://api.groq.com/openai/v1/chat/completions', {
+    const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=' + API_KEY;
+    const requestData = {
+      contents: [{
+        parts: [{
+          text: promptWithUserInput
+        }]
+      }]
+    };
+
+    fetch(url, {
       method: 'POST',
       headers: {
-        'Authorization': 'Bearer ' + GROQ_API_KEY,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        messages: [{ role: "user", content: promptWithUserInput }], // Pass the combined prompt and user input
-        model: model
-      })
+      body: JSON.stringify(requestData)
     })
     .then(response => {
       if (!response.ok) {
@@ -129,8 +134,8 @@ $(function() {
     })
     .then(data => {
       console.log('Response:', data); // Log the response data
-      if (data && data.choices && data.choices.length > 0 && data.choices[0].message && data.choices[0].message.content) {
-        const generatedText = data.choices[0].message.content;
+      if (data && data.candidates && data.candidates.length > 0 && data.candidates[0].content && data.candidates[0].content.parts && data.candidates[0].content.parts.length > 0 && data.candidates[0].content.parts[0].text) {
+        const generatedText = data.candidates[0].content.parts[0].text;
         generate_message(generatedText, 'user');
       } else {
         console.error('Invalid response data format');
