@@ -1,4 +1,4 @@
-const API_KEY = 'AIzaSyBk3hKyKmNqMcEZSUD9cNKGn7sXBiAPuTU'; // Replace 'YOUR_API_KEY' with your actual API key
+const API_KEY = 'AIzaSyArLPSqQsvFK3_sXbLHMxx6U3hfomsZ8J4'; // Replace 'YOUR_API_KEY' with your actual API key
 
 $(function() {
   var INDEX = 0;
