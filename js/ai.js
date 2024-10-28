@@ -17,7 +17,7 @@ $(function() {
 
   // Function to send a request to the Groq API
   function fetchResponse(userInput) {
-    const GROQ_API_KEY = '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';
+    const GROQ_API_KEY = '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';
     const model = "llama-3.1-8b-instant";
 
     // Define internal prompt
