@@ -17,7 +17,7 @@ $(function() {
 
   // Function to send a request to the Groq API
   function fetchResponse(userInput) {
-    const GROQ_API_KEY = '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';
+    const GROQ_API_KEY = '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';
     const model = "openai/gpt-oss-20b";
 
   // Define internal prompt
